@@ -16,3 +16,5 @@ initApp(app ,express)
 
 console.log(new Date());
 app.listen(port, () => console.log(chalk.blueBright(`Example app listening on port ${port}!`)))
+
+export default app
