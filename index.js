@@ -15,7 +15,7 @@ import chalk from 'chalk'
 
 
 //set directory dirname 
-// const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 dotenv.config({ path: path.join(__dirname, './config/.env') })
 import express from 'express'
 import initApp from './src/index.router.js'
@@ -32,4 +32,4 @@ app.listen(port, () => console.log(chalk.blueBright(`Example app listening on po
 app.use("/" , (req,res)=> {
 return res.send("Hello World")
 })
-module.exports =  app 
+export default app 
